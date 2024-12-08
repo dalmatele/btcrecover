@@ -142,6 +142,14 @@ If you mostly know your recovery seed/mnemonic (12-24 recovery words), but think
 
 ## If this tool or other content on my YouTube channel was helpful, feel free to send a tip to: ##
 
+If you think my work is ok, you can donate to me (or send me your ideas to improve this tool):
+
+ETH: 0xDAE2F3c8a710F7C27dfC0d05A00fE53B8139175D
+
+## Thanks to 3rdIteration ##
+
+I cloned this project from him just for improving. If you think you can donate, you can send something to him, instead of me :)
+
 ![Donate Bitcoin](docs/Images/donate-btc-qr.png)
 
 BTC: 37N7B7sdHahCXTcMJgEnHz7YmiR4bEqCrS
