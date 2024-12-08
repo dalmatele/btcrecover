@@ -1,0 +1,29 @@
+{
+    "auth_type": 0,
+    "real_auth_type": 0,
+    "symbol_local": {
+        "symbol": "$",
+        "code": "USD",
+        "symbolAppearsAfter": false,
+        "name": "U.S. dollar",
+        "local": true,
+        "conversion": 0
+    },
+    "clientTimeDiff": 971,
+    "war_checksum": "8d781bd1d88b5bc7",
+    "language": "en",
+    "symbol_btc": {
+        "symbol": "BTC",
+        "code": "BTC",
+        "symbolAppearsAfter": true,
+        "name": "Bitcoin",
+        "local": false,
+        "conversion": 100000000.00000000
+    },
+    "extra_seed": "21ffed321ea9f2598ba240ed4a0ff80a3afd0101710cfc79212683d320c86acb969f6c86424c01e311adc6af01c5d54cb43b51ae18cfb44010eec8b20e5d8741",
+    "payload": "{\"payload\":\"2pb4cHhC3U\/xQWT2NdGlZ16tEWYslwLg2ua\/5GI6g9Gk6xEBj3qLPFy8\/4PXmBffOPr+H2i15lGKXEPSXzaVzBamdiRrMab8oVjesnHavESQzTElYIIUrV3wkaqnoDH7N1c5CqwrRRAU9SKg1bzKqVROUclV26eWEDQWcvLKKZIplhuzN66FGlf4Qq7E4Fw\/v848KNFrwIkmJiJlVvB6SR4X4quUHqsPCfLQy5Uk8buFCb1P5gtQhIbjWgzDaIvT9Pq821ggV6j94O2d5MpDrNTjvZK8QFbG2\/nbNVIRtynoKlcLMZVHzj14J+mBAXPxUXaz3m\/jl7OzwuXxaeyyjs6584BiCB7sjRM2B7EOgXDyFPTJRj3E\/IZK0JkxGBX\/+Glx7Xf4R9bC5vYpN8hCXBOcmOMAJ1CvnlC2L+p1XXJ\/rZfLiYkTYuY8w2UGMq7Qa5FhW8wahS+3Y3qBlGnsfyKQAT1chfM4PYmCTPbvSnQLAdXGjNYSs1yBkSat7lBdxD1qiVrSaMyqWgtcnCE+++umkds9hj\/w4Uuzp0nkKMGhUZfXn\/Qo7nxMmbIme6GCxLskwi\/CxN+udpGSgviI0VCrj\/7TQAjg06\/Ovqu42hEhL+lBPog5v6\/rg\/A5vR8YiZTPMUty8LN4MRp50yV\/8m8eKZltLxT+dfpNn14Lx75xMwUk8mmEMOm4hdfXqrrCQKz6mQuBDjIgZIcpjpe7i8UsD3MnQ9mTumoGDywknqey8LkPk1yKbom9r3U7K5H1iFhpNCOpfMRB6AAk3+0WPTyGhU4AQp\/TwNb+W2O7Gd2ObzcYHnNMTMtCYqVGB0bRUinFfmyG2pzwuGOQj7IGn0haUGN5DSPpAsZaz3EAC0kGGehF6+WmXW6qOc0XdnM66zE9VXdV9Vry7d0YU0yRf4eTu\/JZxkA52VMAJzgQSQfoafGGqofvE71ND6rD2f9d+P31s+KeD\/ROpGN+EA4xNTgshoxG\/hHcSynwLWtP0Pd+oN0oNsbVD380BnXkHkpP7aQEbZOtq\/mDO35uisT0I1fIdEMc2I5QmkS49lilAzL+P8qGVr08cNUDOk2LrlMTE+KoxV9etGqrRFxC7zkvvf3Rkz35s5nilhg\/QXv2sPLnL6WQ5x0FznHvmBdtkmAUtTs641hrTLwvKCp9IODboe2zsY8N9c88OpX0CEJDiadVretDwIX1xl\/yRbROqgEeS8kohVXwMMMlLxmSfpF5XYZM6880WWOi+tDq5mnFzkQUOPQGXM65aGeyjMGP5GY1OqRqvHv1ptIH620EGzS2umem3eTJBWZQRgbAPFCRiEtizIvSAbIA6qmOOhsYhsL2e0AkrcUeDzlfbKQ+CFwGLq4\/0SU+IrG20WgXbZPzmyuKZlhAq94s+\/JR6t7n1ES3wFrUBYOISvMpVkp\/myJvURr+zVDQmS93DxLtoMUFhaZ5UG4TKE68vBWprqh7E4QN5MEisFDwW+gkrnlaEK4mG0pUTvj+4z5jsmIRX0L1TmrMupHC3dcgVmI3SvqW9mVQ0omGiME+ogD6EqZwzWoMATlA5\/rjgHfy29octUVqb\/lgX1LDyh6wu1HogdhRXAR4DOrf9iqleZQ+Zc2yoR3BRfVFlemaFzat7hoinI9wdHv2lZ+IPzdhD7pMe2RwP0+K+JtRMYbL5AyYoXqWJj4vtp+PnMKUAmna6eC82qAnIhrzWW3sZwzomTs6v\/sYDP6BKDecZ1Zk5bNnELZ72TXJcn+a+0INjSAoe9B9MwpOCyydeMzzRt+LFixWlfYLlbzw9vGcoU+6csufKsHxb8hFuO4REcgAof+5paJioHF50Il8\/JND9raPUKLeEaQNf9MTKFvGusn+JOO\/EneYpp471kVbZFdN1HgCN8Ve8r7YodINmCxyZiYEkEMrhFZ82anRMGhPlVv9WfQQta+ASHK5rHZozzF3q9nZk7acAbBqpjqpmq\/Q\/M4NFCl7JMBHqpJyKx5qSJp\/9q2+J4FdZ6qXINwvXjB4+2yiwjA4frhA\/bdi9j7m52QcY8tf6pxyba4XVTxOIods7g0hbMv3j9nyiLL407knW03PWU5Shgs3gI9l+iyZKnbiKAzGWFSjeds3FUATavNU7vZZYIe4O3RsheAoPvwRJWKIbmm9OyOPyYhmxenWkzLcr88K3bnTXjptz7ltd3c6ubAXGIhWbGx4cg==\",\"pbkdf2_iterations\":5000,\"version\":4}",
+    "guid": "438eb25e-7d46-40ba-9888-42c44f083e7c",
+    "serverTime": 1733669581254,
+    "payload_checksum": "c7f280ba8054b4464b96b98de031d8b8f1a10a592ac684c0bce072736c3f7de4",
+    "sync_pubkeys": false
+}

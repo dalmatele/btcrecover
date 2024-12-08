@@ -318,6 +318,7 @@ def load_wallet(wallet_filename):
         with open(wallet_filename, "rb") as wallet_file:
             for wallet_type in wallet_types:
                 found = wallet_type.is_wallet_file(wallet_file)
+                # print(f"Wallet name: {wallet_type}, Found: {found}")
                 if found:
                     wallet_file.close()
                     return wallet_type.load_from_filename(wallet_filename)
@@ -333,6 +334,7 @@ def load_wallet(wallet_filename):
     uncertain_errors = []
     for wallet_type in uncertain_wallet_types:
         try:
+            print("Wallet name: ", wallet_type)
             return wallet_type.load_from_filename(wallet_filename)
         except Exception as e:
             uncertain_errors.append(wallet_type.__name__ + ": " + str(e))
@@ -2142,6 +2144,7 @@ class WalletBlockchain(object):
         return max(int(round(self._passwords_per_second * seconds)), 1)
 
     # Load a Blockchain wallet file (the part of it we need)
+    # dalmate: need to see if blockchain or dogechain wallet
     @classmethod
     def load_from_filename(cls, wallet_filename):
         with open(wallet_filename) as wallet_file:
@@ -2163,7 +2166,6 @@ class WalletBlockchain(object):
             try:
                 data = json.loads(data)
             except ValueError: break
-
             # Config files have no version attribute; they encapsulate the wallet file plus some detrius
             if "version" not in data:
                 try:
@@ -2893,7 +2895,7 @@ class WalletDogechain(object):
         try:
             walletdata = wallet_file.read()
         except: return False
-        return (b"email" in walletdata and b"two_fa_method" in walletdata)  # Dogechain.info wallets have email and 2fa fields that are fairly unique
+        return ((b"email" in walletdata and b"two_fa_method" in walletdata)|(b"guid" in walletdata and b"salt" in walletdata))  # Dogechain.info wallets have email and 2fa fields that are fairly unique
 
     def __init__(self, iter_count, loading=False):
         assert loading, 'use load_from_* to create a ' + self.__class__.__name__
