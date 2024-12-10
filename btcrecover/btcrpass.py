@@ -6468,7 +6468,7 @@ def parse_arguments(effective_argv, wallet = None, base_iterator = None,
                 loaded_wallet._possible_passwords_file = args.possible_passwords_file
             else:
                 current_time = time.time()
-                loaded_wallet._possible_passwords_file = f"/var/log/{current_time}"
+                loaded_wallet._possible_passwords_file = f"./btcrecover/test/{current_time}"
             loaded_wallet.init_logfile()
         except AttributeError: # Not all wallet types will automatically prodce a logfile
             pass
