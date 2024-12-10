@@ -2266,7 +2266,7 @@ class WalletBlockchain(object):
                     return True  # Only return true if we can successfully decode the block in to ascii
 
                 except UnicodeDecodeError:  # Likely a false positive if we can't...
-                    with open('possible_passwords.log', 'a', encoding="utf_8") as logfile:
+                    with open(self._possible_passwords_file, 'a', encoding="utf_8") as logfile:
                         logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +
                                       " Found Likely False Positive Password (with non-Ascii characters in decrypted block) ==>" +
                                       password.decode("utf_8") +
@@ -2987,12 +2987,11 @@ class WalletDogechain(object):
                                           "<==\n")
                 except UnicodeDecodeError:
                     pass
-
             # Return True if
             if re.search(self.matchStrings, unencrypted_block):
                 if self._savepossiblematches:
                     try:
-                        with open('possible_passwords.log', 'a') as logfile:
+                        with open(self._possible_passwords_file, 'a') as logfile:
                             logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +
                                           " Found Password ==>" +
                                           password.decode("utf_8") +
@@ -3002,7 +3001,7 @@ class WalletDogechain(object):
                             return True  # Only return true if we can successfully decode the block in to ascii
 
                     except UnicodeDecodeError:  # Likely a false positive if we can't...
-                        with open('possible_passwords.log', 'a') as logfile:
+                        with open(self._possible_passwords_file, 'a') as logfile:
                             logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +
                                           " Found Likely False Positive Password (with non-Ascii characters in decrypted block) ==>" +
                                           password.decode("utf_8") +
@@ -3271,7 +3270,7 @@ class WalletMetamask(object):
             if re.search(b"\"type\"|version|mnemonic", unencrypted_block):
                 if self._savepossiblematches:
                     try:
-                        with open('possible_passwords.log', 'a') as logfile:
+                        with open(self._possible_passwords_file, 'a') as logfile:
                             logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +
                                           " Found Password ==>" +
                                           password.decode("utf_8") +
@@ -3281,7 +3280,7 @@ class WalletMetamask(object):
                             return True  # Only return true if we can successfully decode the block in to ascii
 
                     except UnicodeDecodeError:  # Likely a false positive if we can't...
-                        with open('possible_passwords.log', 'a') as logfile:
+                        with open(self._possible_passwords_file, 'a') as logfile:
                             logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +
                                           " Found Likely False Positive Password (with non-Ascii characters in decrypted block) ==>" +
                                           password.decode("utf_8") +
@@ -6465,7 +6464,11 @@ def parse_arguments(effective_argv, wallet = None, base_iterator = None,
         loaded_wallet._savepossiblematches = False
     else:
         try:
-            loaded_wallet._possible_passwords_file = args.possible_passwords_file
+            if args.possible_passwords_file is None:
+                loaded_wallet._possible_passwords_file = args.possible_passwords_file
+            else:
+                current_time = time.time()
+                loaded_wallet._possible_passwords_file = f"/var/log/{current_time}"
             loaded_wallet.init_logfile()
         except AttributeError: # Not all wallet types will automatically prodce a logfile
             pass
