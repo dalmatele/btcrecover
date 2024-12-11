@@ -59,10 +59,10 @@ if __name__ == "__main__":
 		print("You may also consider donating to Gurnec, who created and maintained this tool until late 2017 @ 3Au8ZodNHPei7MQiSVAWb7NB2yqsb48GW4")
 		print()
 		#dalmate: remove password found report
-		# btcrpass.safe_print("Password found: '" + password_found + "'")
-		# if any(ord(c) < 32 or ord(c) > 126 for c in password_found):
-		# 	print("HTML Encoded Password:   '" + password_found.encode("ascii", "xmlcharrefreplace").decode() + "'")
-		btcrpass.safe_print("Yay!!!!!Password found.")
+		btcrpass.safe_print("Password found: '" + password_found + "'")
+		if any(ord(c) < 32 or ord(c) > 126 for c in password_found):
+			print("HTML Encoded Password:   '" + password_found.encode("ascii", "xmlcharrefreplace").decode() + "'")
+		# btcrpass.safe_print("Yay!!!!!Password found.")
 		retval = 0
 
 	elif not_found_msg:
