@@ -9080,4 +9080,5 @@ def main():
     worker_out_queue.close()
 
     global searchfailedtext
+    
     return (password_found, searchfailedtext if password_found is False else None)

