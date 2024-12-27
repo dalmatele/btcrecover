@@ -18,178 +18,178 @@ collator = Collator.createInstance(Locale('vi_VN.UTF-8'))
 blocks = {
     # A
     'v_a1': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['', 'o'],
-        'nuclear': ['a'],
+        'nuclear': ['a', 'a', 'a', 'a', 'a', 'a'],
         'ending':  ['', 'c', 'ch', 'i', 'm', 'n', 'ng', 'nh', 'o', 'p', 't', 'u', 'y']
     },
     # Ă
     'v_a2': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['', 'o'],
-        'nuclear': ['a'],
+        'nuclear': ['a', 'a', 'a', 'a', 'a', 'a'],
         'ending':  ['c', 'm', 'n', 'ng', 'p', 't']
     },
     # Â 
     'v_a3': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['', 'u'],
-        'nuclear': ['a'],
+        'nuclear': ['a', 'a', 'a', 'a', 'a', 'a'],
         'ending':  ['c', 'm', 'n', 'ng', 'p', 't', 'u', 'y']
     },
     # E
     'v_e1': {
-        'initial': ['', 'b', 'ch', 'd', 'đ', 'g', 'gh', 'gi', 'h', 'k', 'kh', 'l', 'm', 'n', 'ng', 'ngh', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'ch', 'd', 'd', 'g', 'gh', 'gi', 'h', 'k', 'kh', 'l', 'm', 'n', 'ng', 'ngh', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['', 'o'],
-        'nuclear': ['e'],
+        'nuclear': ['e', 'e', 'e', 'e', 'e', 'e'],
         'ending':  ['', 'c', 'm', 'n', 'ng', 'o', 'p', 't']
     },
     # Ê  
     'v_e2': {
-        'initial': ['', 'b', 'ch', 'd', 'đ', 'g', 'gh', 'gi', 'h', 'k', 'kh', 'l', 'm', 'n', 'ng', 'ngh', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'ch', 'd', 'd', 'g', 'gh', 'gi', 'h', 'k', 'kh', 'l', 'm', 'n', 'ng', 'ngh', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['', 'u'],
-        'nuclear': ['e'],
+        'nuclear': ['e', 'e', 'e', 'e', 'e', 'e'],
         'ending':  ['', 'ch', 'm', 'n', 'nh', 'p', 't', 'u']
     },
     # I
     'v_i': {
-        'initial': ['', 'b', 'ch', 'd', 'đ', 'g', 'gh', 'h', 'k', 'kh', 'l', 'm', 'n', 'ngh', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'ch', 'd', 'd', 'g', 'gh', 'h', 'k', 'kh', 'l', 'm', 'n', 'ngh', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['i'],
+        'nuclear': ['i', 'i', 'i', 'i', 'i', 'i',],
         'ending':  ['', 'ch', 'm', 'n', 'nh', 'p', 't', 'u']
     },
     # O
     'v_o1': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['o'],
+        'nuclear': ['o', 'o', 'o', 'o', 'o', 'o'],
         'ending':  ['', 'c', 'i', 'm', 'n', 'ng', 'p', 't']
     },
     # OO
     'v_oo1': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['oo'],
+        'nuclear': ['oo', 'oo', 'oo', 'oo', 'oo', 'oo'],
         'ending':  ['c', 'ng']
     },
     # Ô
     'v_o2': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['o'],
+        'nuclear': ['o', 'o', 'o', 'o', 'o', 'o'],
         'ending':  ['', 'c', 'i', 'm', 'n', 'ng', 'p', 't']
     },
     # ÔÔ
     'v_oo2': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['oo'],
+        'nuclear': ['oo', 'oo', 'oo', 'oo', 'oo', 'oo'],
         'ending':  ['ng']
     },
     # Ơ1 (kết hợp với âm đệm zero)
     # ngoài trường hợp âm đầu "q" thì thực tế không thấy trường hợp có cả âm đệm lẫn âm cuối không zero
     'v_o3': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'qu', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['o'],
+        'nuclear': ['o', 'o', 'o', 'o', 'o', 'o'],
         'ending':  ['', 'c', 'i', 'm', 'n', 'ng', 'p', 't']
     },
     # Ơ2 (kết hợp với âm đệm /-w-/, âm cuối zero)
     'v_o4': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['u'],
-        'nuclear': ['o'],
+        'nuclear': ['o', 'o', 'o', 'o', 'o', 'o'],
         'ending':  ['']
     },
     # U
     'v_u1': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['u'],
+        'nuclear': ['u', 'u', 'u', 'u', 'u', 'u'],
         'ending':  ['', 'c', 'i', 'm', 'n', 'ng', 'p', 't']
     },
     # Ư
     'v_u2': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['u'],
+        'nuclear': ['u', 'u', 'u', 'u', 'u', 'u'],
         'ending':  ['', 'c', 'i', 'm', 'n', 'ng', 'p', 't', 'u']
     },
     # Y1
     'v_y1': {
-        'initial': ['', 'b', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'q', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'q', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['u'],
-        'nuclear': ['y'],
+        'nuclear': ['y', 'y', 'y', 'y', 'y', 'y'],
         'ending':  ['', 'ch', 'm', 'n', 'nh', 'p', 't', 'u']
     },
     # Y2 (ngoại lệ, cho một số từ Hán-Việt)
     'v_y2': {
         'initial': [''],
         'schwa':   [''],
-        'nuclear': ['y'],
+        'nuclear': ['y', 'y', 'y', 'y', 'y', 'y'],
         'ending':  ['']
     },
     # IA (gi được khai thành g)
     'v_ia': {
-        'initial': ['', 'b', 'ch', 'd', 'đ', 'g', 'gh', 'h', 'k', 'kh', 'l', 'm', 'n', 'ngh', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'ch', 'd', 'd', 'g', 'gh', 'h', 'k', 'kh', 'l', 'm', 'n', 'ngh', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['ia'],
+        'nuclear': ['ia', 'ia', 'ia', 'ia', 'ia', 'ia'],
         'ending':  ['']
     },
     # IÊ (gi được khai thành g)
     'v_ie': {
-        'initial': ['b', 'ch', 'd', 'đ', 'g', 'gh', 'h', 'k', 'kh', 'l', 'm', 'n', 'ngh', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['b', 'ch', 'd', 'd', 'g', 'gh', 'h', 'k', 'kh', 'l', 'm', 'n', 'ngh', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['ie'],
+        'nuclear': ['ie', 'ie', 'ie', 'ie', 'ie', 'ie'],
         'ending':  ['c', 'm', 'n', 'ng', 'p', 't', 'u']
     },
     # UA
     'v_ua': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['ua'],
+        'nuclear': ['ua', 'ua', 'ua', 'ua', 'ua', 'ua'],
         'ending':  ['']
     },
     # UÔ
     'v_uo': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['uo'],
+        'nuclear': ['uo', 'uo', 'uo', 'uo', 'uo', 'uo'],
         'ending':  ['c', 'i', 'm', 'n', 'ng', 'p', 't']
     },
     # ƯA
     'v_wa': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['ua'],
+        'nuclear': ['ua', 'ua', 'ua', 'ua', 'ua', 'ua'],
         'ending':  ['']
     },
     # ƯƠ
     'v_wo': {
-        'initial': ['', 'b', 'c', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'c', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   [''],
-        'nuclear': ['uo'],
+        'nuclear': ['uo', 'uo', 'uo', 'uo', 'uo', 'uo'],
         'ending':  ['c', 'i', 'm', 'n', 'ng', 'p', 't', 'u']
     },
     # YA
     'v_ya': {
-        'initial': ['', 'b', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'q', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'q', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['u'],
-        'nuclear': ['ya'],
+        'nuclear': ['ya', 'ya', 'ya', 'ya', 'ya', 'ya'],
         'ending':  ['']
     },
     # YÊ1
     'v_ye1': {
-        'initial': ['', 'b', 'ch', 'd', 'đ', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'q', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
+        'initial': ['', 'b', 'ch', 'd', 'd', 'g', 'gi', 'h', 'kh', 'l', 'm', 'n', 'ng', 'nh', 'p', 'ph', 'q', 'r', 's', 't', 'th', 'tr', 'v', 'x'],
         'schwa':   ['u'],
-        'nuclear': ['ye'],
+        'nuclear': ['ye', 'ye', 'ye', 'ye', 'ye', 'ye'],
         'ending':  ['c', 'm', 'n', 'ng', 'p', 't']
     },
     # YÊ2 (ngoại lệ)
     'v_ye2': {
         'initial': [''],
         'schwa':   [''],
-        'nuclear': ['ye'],
+        'nuclear': ['ye', 'ye', 'ye', 'ye', 'ye', 'ye'],
         'ending':  ['c', 'm', 'n', 'ng', 'p', 't', 'u']
     }
 }
@@ -204,10 +204,10 @@ ending_in_tone56_only = ['p', 't', 'c', 'ch']
 schwa_chars = ['o', 'u']
 
 # e, ê nuclear
-e_ee = ['e']
+e_ee = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e']
 
 # Syllable list initiated with "quốc"
-syllables = ['quoc']
+syllables = ['quốc']
 
 # Generating syllables
 for key in blocks:
@@ -237,7 +237,7 @@ for i, w in enumerate(syllables):
         syllables.pop(i-1)
 
 # Write to file
-filename = 'vietnamese.txt'
+filename = 'LuomTV-Vietnamese-Syllables-Auto-Generated.txt'
 with open(filename, 'w') as f:
     f.writelines("%s\n" % l for l in syllables)
     
