@@ -7,7 +7,7 @@ python
 venv/
 HashCheck.txt
 bitcoinlib/.coveragerc
-wallet.aes.json
+*.aes.json
 test.txt
 tokenlist.txt
 seeds.txt
