@@ -17,3 +17,5 @@ possible_passwords.log
 passwordlist.txt
 output.log
 private.pem
+*.aes.json
+hash.txt
