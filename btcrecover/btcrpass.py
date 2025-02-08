@@ -2970,6 +2970,7 @@ class WalletDogechain(object):
 
     # A bit fragile because it assumes that some specific text is in the first encrypted block,
     def check_decrypted_block(self, unencrypted_block, password):
+        print(unencrypted_block.decode("ascii", "ignore"))
         if unencrypted_block[0] == ord("{"):
             if b'"' in unencrypted_block[
                        :4]:  # If it really is a json wallet fragment, there will be a double quote in there within the first few characters...
