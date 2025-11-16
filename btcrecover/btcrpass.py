@@ -2846,7 +2846,6 @@ class WalletDogechain(object):
         passwordSHA256 = hashlib.sha256(password).digest()
         passwordbase64 = base64.b64encode(passwordSHA256)
         key = hashlib.pbkdf2_hmac('sha256', passwordbase64, self.salt, self._iter_count, 32)
-
         decrypted = AES.new(key, AES.MODE_CBC).decrypt(self._encrypted_wallet)
         padding = ord(decrypted[-1:])  # ISO 10126 padding length
 
@@ -2858,7 +2857,7 @@ class WalletDogechain(object):
         # Can't decrypt or dump an extract in any meaninful way...
         if self._using_extract:
             return
-
+        
         # If we aren't dumping these files, then just return...
         if not (self._dump_wallet_file or self._dump_privkeys_file):
             return
@@ -2937,6 +2936,7 @@ class WalletDogechain(object):
         self._encrypted_wallet = ""
         self._encrypted_block = payload_data
         self._using_extract = True
+        
         return self
 
     def difficulty_info(self):
@@ -2970,7 +2970,7 @@ class WalletDogechain(object):
 
     # A bit fragile because it assumes that some specific text is in the first encrypted block,
     def check_decrypted_block(self, unencrypted_block, password):
-        print(unencrypted_block.decode("ascii", "ignore"))
+        # print(unencrypted_block.decode("ascii", "ignore"))
         if unencrypted_block[0] == ord("{"):
             if b'"' in unencrypted_block[
                        :4]:  # If it really is a json wallet fragment, there will be a double quote in there within the first few characters...
@@ -3040,7 +3040,7 @@ class WalletDogechain(object):
         return False, count
 
     def _return_verified_password_or_false_opencl(self, arg_passwords):  # dogechain.info Main Password
-
+        # print(self._encrypted_wallet)
         # Convert Unicode strings
         passwords = map(lambda p: base64.b64encode(hashlib.sha256(p.encode("utf_8", "ignore")).digest()), arg_passwords)
 
@@ -3050,7 +3050,7 @@ class WalletDogechain(object):
         passwords = map(lambda p: p.encode("utf_8", "ignore"), arg_passwords)
 
         results = zip(passwords, clResult)
-
+        
         for count, (password, key) in enumerate(results, 1):
             decrypted_block = AES.new(key, AES.MODE_CBC).decrypt(self._encrypted_block)[16:]
             if self.check_decrypted_block(decrypted_block, password):
